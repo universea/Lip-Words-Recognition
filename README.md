@@ -15,19 +15,19 @@
 - Paddle方案修改自：[PaddleVideo](https://github.com/PaddlePaddle/models/tree/develop/PaddleCV/PaddleVideo )
 
 
-| 初赛模型            | ACC     | Size | seg_num  |
-| ------------------- | ------- | ---- | -------- |
-| Resnet50   (Paddle) | 0.76    | 100  | 12       |
-| Resnet50   (Paddle) | 0.80    | 100  | 24       |
-| Resnet50   (Paddle) | 0.82    | 100  | 12 -> 24 |
-| Resnet101 (Torch)   | 0.82    | 184  | 24       |
-| 50P+101T            | 0.85245 | ---  | 24       |
+| 初赛模型            | ACC       | Size | seg_num  |
+| ------------------- | --------- | ---- | -------- |
+| Resnet50   (Paddle) | 0.76      | 100  | 12       |
+| Resnet50   (Paddle) | 0.80      | 100  | 24       |
+| Resnet50   (Paddle) | 0.828     | 100  | 12 -> 24 |
+| Resnet101 (Torch)   | 0.82~0.83 | 184  | 24       |
+| 50P+101T            | 0.85245   | ---  | 24       |
 
-| 决赛模型            | ACC   | Size | seg_num |
-| ------------------- | ----- | ---- | ------- |
-| Resnet50   (Paddle) | 0.885 | 128  | 24      |
-| Resnet101 (Torch)   | 0.916 | 184  | 24      |
-| 50P+101T            | 0.931 | ---  | 24      |
+| 决赛模型            | ACC    | Size | seg_num |
+| ------------------- | ------ | ---- | ------- |
+| Resnet50   (Paddle) | 0.8842 | 128  | 24      |
+| Resnet101 (Torch)   | 0.9167 | 184  | 24      |
+| 50P+101T            | 0.931  | ---  | 24      |
 
 **本机环境**：（皆为最新版本）
 
@@ -38,7 +38,7 @@
 
 **安装：**
 
-[PaddlePaddle]: https://www.paddlepaddle.org.cn/
+[PaddlePaddle](https://www.paddlepaddle.org.cn/)
 
 ```
 conda create -n paddlepaddle python=3.7
