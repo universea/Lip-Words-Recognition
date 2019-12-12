@@ -1,0 +1,52 @@
+[MODEL]
+name = "TSM"
+format = "pkl"
+num_classes = 1000
+seg_num = 24
+seglen = 1
+image_mean = [0.550212, 0.366118, 0.318551]
+image_std = [0.144855, 0.124059, 0.225]
+num_layers = 50
+
+[TRAIN]
+epoch = 160
+short_size = 180
+target_size = 160
+num_reader_threads = 8
+buf_size = 1024
+batch_size = 6
+use_gpu = True
+num_gpus = 1
+filelist = "/home/ubuntu/disk2/lip_data/data/train.list"
+learning_rate = 0.001
+learning_rate_decay = 0.2
+decay_epochs = [20, 40]
+l2_weight_decay = 1e-4
+momentum = 0.9
+total_videos = 5200
+enable_ce = False 
+
+[VALID]
+short_size = 180
+target_size = 160
+num_reader_threads = 1
+buf_size = 1024
+batch_size = 6
+filelist = "/home/ubuntu/disk2/lip_data/data/val.list"
+
+[TEST]
+short_size = 180
+target_size = 160
+num_reader_threads = 8
+buf_size = 1024
+batch_size = 6
+filelist = "/home/ubuntu/disk2/lip_data/data/test.list"
+
+[INFER]
+short_size = 180
+target_size = 160
+num_reader_threads = 8
+buf_size = 1024
+batch_size = 1
+filelist = "/home/ubuntu/disk2/lip_data/data/test.list"
+
