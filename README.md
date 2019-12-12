@@ -4,13 +4,10 @@
 
 ##### 模型方案：
 
-Toch版本可以查看队友的详细方案：
+- Toch版本可以查看队友的详细方案：https://github.com/TimeChi/Lip_Reading_Competition
 
-[Lip_Reading_Competition]: https://github.com/TimeChi/Lip_Reading_Competition
+- Paddle方案修改自：https://github.com/PaddlePaddle/models/tree/develop/PaddleCV/PaddleVideo 
 
-Paddle方案修改自：
-
-[PaddleVideo]: https://github.com/PaddlePaddle/models/tree/develop/PaddleCV/PaddleVideo
 
 | 初赛模型            | ACC     | Size | seg_num  |
 | ------------------- | ------- | ---- | -------- |
@@ -94,6 +91,6 @@ python train.py --epoch 200 --use_gpu True --resume checkpoints_models_best/
 第一个文件可以直接用来提交结果，第二个文件是用来进行模型融合的（包含了score列），执行
 
 ```
- python infer.py --weights checkpoints_models_best082
+ python infer.py --weights checkpoints_models_best
 ```
 
