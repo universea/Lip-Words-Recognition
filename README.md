@@ -1,6 +1,30 @@
-# LIP-TSM
+# Lip-Words
 
 ## 基础信息
+
+##### 模型方案：
+
+Toch版本可以查看队友的详细方案：
+
+[Lip_Reading_Competition]: https://github.com/TimeChi/Lip_Reading_Competition
+
+Paddle方案修改自：
+
+[PaddleVideo]: https://github.com/PaddlePaddle/models/tree/develop/PaddleCV/PaddleVideo
+
+| 初赛模型            | ACC     | Size | seg_num  |
+| ------------------- | ------- | ---- | -------- |
+| Resnet50   (Paddle) | 0.76    | 100  | 12       |
+| Resnet50   (Paddle) | 0.80    | 100  | 24       |
+| Resnet50   (Paddle) | 0.82    | 100  | 12 -> 24 |
+| Resnet101 (Torch)   | 0.82    | 184  | 24       |
+| 50P+101T            | 0.85245 | ---  | 24       |
+
+| 决赛模型            | ACC   | Size | seg_num |
+| ------------------- | ----- | ---- | ------- |
+| Resnet50   (Paddle) | 0.885 | 128  | 24      |
+| Resnet101 (Torch)   | 0.916 | 184  | 24      |
+| 50P+101T            | 0.931 | ---  | 24      |
 
 **本机环境**：（皆为最新版本）
 
@@ -11,10 +35,11 @@
 
 **安装：**
 
+[PaddlePaddle]: https://www.paddlepaddle.org.cn/
+
 ```
 conda create -n paddlepaddle python=3.7
 source activate paddlepaddle
-cd Lip-TSM-1
 pip install paddlepaddle-gpu
 pip install requirements.txt
 ```
@@ -32,7 +57,7 @@ data:
 
 ## 操作步骤
 
-**第一步（数据准备，同Lip-TSM-1一样，如若已执行，无需再执行）：**	
+**第一步（数据准备，生成list）：**	
 
 ​	修改 tools/make_dataset.py 文件__main__下的数据集路径data_dir为自己的数据集路径'/xxx/data/'，然后执行
 
@@ -48,16 +73,17 @@ python tools/make_dataset.py
 
 **第三步（开始训练）：**
 
-1、利用Lip-TSM-1的模型作为预训练，复制Lip-TSM-1目录下的checkpoints_models_best模型文件夹到Lip-TSM-2目录下，请使用--resume 权重路径，执行 
-
-```
-python train.py --epoch 200 --use_gpu True --resume checkpoints_models_best/
-```
-2、如若从头训练，执行 
+1、如若从头训练，执行 
 
 ```
 python train.py --epoch 200 --use_gpu True --pretrain False
 ```
+2、如若有预训练模型，执行 
+
+```
+python train.py --epoch 200 --use_gpu True --resume checkpoints_models_best/
+```
+
 **第四步：**
 
 预测结果会有以时间戳命名的两个文件
