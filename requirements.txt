@@ -39,7 +39,7 @@ nltk==3.4.5
 notebook==6.0.1
 numpy==1.17.0
 opencv-mat==0.1
-opencv-python==4.1.0.25
+opencv-python==4.2.0.32
 paddlehub==1.1.1
 paddlepaddle-gpu
 pandas==0.25.1
