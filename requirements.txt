@@ -18,7 +18,7 @@ imageio==2.5.0
 importlib-metadata==0.23
 instaboost==0.2
 ipykernel==5.1.2
-ipython==7.8.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 itsdangerous==1.1.0
 jedi==0.15.1
