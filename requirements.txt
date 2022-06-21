@@ -37,7 +37,7 @@ nbformat==4.4.0
 networkx==2.3
 nltk==3.4.5
 notebook==6.0.1
-numpy==1.17.0
+numpy==1.22.0
 opencv-mat==0.1
 opencv-python==4.1.0.25
 paddlehub==1.1.1
